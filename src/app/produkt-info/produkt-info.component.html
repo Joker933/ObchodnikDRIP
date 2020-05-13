@@ -1,0 +1,20 @@
+<div class="mx-auto" style="width: 1200px;">
+  <div class="main_text text-center">
+    <div>
+      <div class="d-flex flex-wrap ">
+        <div class="card mx-auto border" style="width: 30rem;">
+          <img class="card-img-top" [src]="'http://kodytek.cz:8080/rest-api/' + produktik.images[0].miniaturePath"
+               alt="Card image cap">
+          <div class="card-body ">
+            <H3 class="card-text">{{produktik.title}}</H3>
+            <p class="card-text">{{produktik.description}}</p>
+            <h2 class="card-text">{{produktik.price / 100}} Kč</h2>
+            <h5 class="card-title"></h5>
+            <a href="#" class="btn btn-primary">Hodit do košíku</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
