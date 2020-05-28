@@ -12,16 +12,21 @@ export class KategoriesService {
 
   constructor(private http: HttpClient) { }
 
-  getKategorie(){
+  getKategorie() {
     const headers = new HttpHeaders().set('access-token', KlickyOdWebu.token);
     return this.http.get<KategorieModel[]>('/api/categories', {headers});
   }
-  getJednaKategorie(id: number){
+  getJednaKategorie(id: number) {
     const headers = new HttpHeaders().set('access-token', KlickyOdWebu.token);
     return this.http.get<KategorieStrankyModel>('/api/categories/' + id, {headers});
   }
-  getProduktInfo(id: number){
+  getCategoryPage( id: number, page: number) {
+    const headers = new HttpHeaders().set('access-token', KlickyOdWebu.token);
+    return this.http.get<KategorieStrankyModel>('/api/categories/' + id + '/?page=' + page, {headers});
+  }
+  getProduktInfo(id: number) {
     const headers = new HttpHeaders().set('access-token', KlickyOdWebu.token);
     return this.http.get<ProduktModel>('/api/products/' + id, {headers});
   }
+
 }

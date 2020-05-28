@@ -21,8 +21,10 @@ export class ProduktInfoComponent implements OnInit {
         this.produkt5.getProduktInfo(params.id)
           .subscribe((products: ProduktModel) => {
             this.produktik = products;
+            console.log(this.produktik);
           });
       });
   }
+
 
 }

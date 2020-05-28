@@ -10,6 +10,34 @@
             <p class="card-text">{{produktik.description}}</p>
             <h2 class="card-text">{{produktik.price / 100}} Kč</h2>
             <h5 class="card-title"></h5>
+            <div *ngIf="produktik.id < 18">
+              <p><strong>Značka: </strong>{{produktik.parameters ['Značka']}}</p>
+            <p><strong>Frekvence CPU: </strong>{{produktik.parameters ['Frekvence procesoru']}}</p>
+            <p><strong>Hmotnost: </strong>{{produktik.parameters ['Hmotnost']}}</p>
+            <p><strong>SSD: </strong>{{produktik.parameters ['Kapaciat SSD']}}</p>
+            <p><strong>GPU: </strong>{{produktik.parameters ['Model grafické karty']}}</p>
+            <p><strong>CPU: </strong>{{produktik.parameters ['Model procesor']}}</p>
+            <p><strong>OS: </strong>{{produktik.parameters ['Operační systém']}}</p>
+            <p><strong>Rozliseni Displeje: </strong>{{produktik.parameters ['Rozlišení displeje']}}</p>
+            <p><strong>Rozměry displeje: </strong>{{produktik.parameters ['Rozměry']}}</p>
+            <p><strong>Uhlopříčka displeje: </strong>{{produktik.parameters ['Uhlopříčka displeje']}}</p>
+            </div>
+            <div *ngIf="produktik.id > 17 && produktik.id < 24">
+              <p><strong>Značka: </strong>{{produktik.parameters ['Značka']}}</p>
+              <p><strong>CPU: </strong>{{produktik.parameters ['CPU']}}</p>
+              <p><strong>GPU: </strong>{{produktik.parameters ['GPU']}}</p>
+              <p><strong>Rozlišení displeje: </strong>{{produktik.parameters ['Rozslišení displeje']}}</p>
+              <p><strong>Velikost displeje: </strong>{{produktik.parameters ['Velkost displeje']}}</p>
+              <p><strong>Wifi: </strong>{{produktik.parameters ['Wifi']}}</p>
+
+            </div>
+            <div *ngIf="produktik.id > 23">
+              <p><strong>CPU: </strong>{{produktik.parameters ['CPU']}}</p>
+              <p><strong>GPU: </strong>{{produktik.parameters ['GPU']}}</p>
+              <p><strong>Velikost disku: </strong>{{produktik.parameters ['Velikost disku']}}</p>
+              <p><strong>Značka: </strong>{{produktik.parameters ['Značka']}}</p>
+              <p><strong>Wifi: </strong>{{produktik.parameters ['Wifi']}}</p>
+            </div>
             <a href="#" class="btn btn-primary">Hodit do košíku</a>
           </div>
         </div>
@@ -18,3 +46,4 @@
     </div>
   </div>
 </div>
+
