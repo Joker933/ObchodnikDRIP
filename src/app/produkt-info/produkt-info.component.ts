@@ -18,7 +18,7 @@ export class ProduktInfoComponent implements OnInit {
   public sum: number;
   public averageFinalNumber: number;
 
-  constructor(private http: HttpClient, private produkt5: KategoriesService, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient, private produkt5: KategoriesService, private route: ActivatedRoute, private router: Router) { }
 
 
   ngOnInit() {
@@ -34,6 +34,10 @@ export class ProduktInfoComponent implements OnInit {
             console.log(this.produktik);
           });
       });
+  }
+
+  addDoKosiku(id: number) {
+    this.router.navigate(['/kosik'], {queryParams: {id}});
   }
 
 

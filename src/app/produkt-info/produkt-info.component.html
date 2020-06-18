@@ -39,7 +39,7 @@
               <p><strong>Značka: </strong>{{produktik.parameters ['Značka']}}</p>
               <p><strong>Wifi: </strong>{{produktik.parameters ['Wifi']}}</p>
             </div>
-            <a href="#" class="btn btn-primary">Hodit do košíku</a>
+            <a (click)="addDoKosiku(produktik.id)" class="btn btn-primary">Hodit do košíku</a>
           </div>
         </div>
       </div>

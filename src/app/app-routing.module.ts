@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {ProduktyComponent} from './produkty/produkty.component';
 import {DomovComponent} from './domov/domov.component';
 import {ProduktInfoComponent} from './produkt-info/produkt-info.component';
+import {KosikComponent} from './kosik/kosik.component';
 
 
 
@@ -10,6 +11,7 @@ const routes: Routes = [
   {path: 'domov', component: DomovComponent},
   {path: 'produkty', component: ProduktyComponent},
   {path: 'produkt-info', component: ProduktInfoComponent},
+  {path: 'kosik', component: KosikComponent},
   {path: '', redirectTo: '/domov', pathMatch: 'full' },
 
 ];

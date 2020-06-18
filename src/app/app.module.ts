@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ProduktyComponent } from './produkty/produkty.component';
 import { DomovComponent } from './domov/domov.component';
 import { ProduktInfoComponent } from './produkt-info/produkt-info.component';
+import { KosikComponent } from './kosik/kosik.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProduktyComponent,
     DomovComponent,
-    ProduktInfoComponent
+    ProduktInfoComponent,
+    KosikComponent
   ],
   imports: [
     BrowserModule,
